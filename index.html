@@ -3,11 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>HBusiness Group — Em breve</title>
 
-  <meta name="description" content="O site oficial do HBusiness Group está em preparação. Coisas grandes estão a caminho." />
+  <meta name="description" content="O site oficial do HBusiness Group está em preparação. Em breve, uma nova experiência corporativa." />
+
+  <!-- FAVICON / APPLE -->
+  <link rel="icon" type="image/png" href="favicon-hbusiness.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png">
 
   <style>
+    :root {
+      --preto: #000000;
+      --cinza-escuro: #2a2a2a;
+      --cinza-medio: #666666;
+      --cinza-claro: #aaaaaa;
+      --branco: #ffffff;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -17,8 +30,8 @@
 
     body {
       min-height: 100vh;
-      background: #ffffff;
-      color: #111;
+      background: var(--branco);
+      color: var(--cinza-escuro);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -30,35 +43,82 @@
     .logo {
       max-width: 420px;
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       font-weight: 600;
-      margin-bottom: 15px;
+      color: var(--preto);
+      margin-bottom: 18px;
     }
 
     p {
       font-size: 1rem;
-      color: #555;
-      max-width: 600px;
-      margin-bottom: 35px;
+      color: var(--cinza-medio);
+      max-width: 620px;
+      line-height: 1.6;
+      margin-bottom: 40px;
     }
 
     .contact {
       font-size: 0.95rem;
-      color: #333;
-      line-height: 1.8;
+      color: var(--cinza-escuro);
+      line-height: 1.9;
     }
 
     .contact a {
-      color: #000;
+      color: var(--preto);
       text-decoration: none;
       font-weight: 600;
     }
 
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
     .footer {
       position: absolute;
-      bottom: 20px;
+      bottom: 22px;
       font-size: 0.8rem;
+      color: var(--cinza-claro);
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGO -->
+  <img src="logo-hbusiness.png" alt="HBusiness Group" class="logo" />
+
+  <!-- TEXTO PRINCIPAL -->
+  <h1>Estamos organizando algo grande por aqui</h1>
+
+  <p>
+    O <strong>site oficial do HBusiness Group</strong> está em desenvolvimento.<br>
+    Estratégia, estrutura e visão de longo prazo — com tudo no lugar certo.<br><br>
+    Em breve você vai entender.
+  </p>
+
+  <!-- CONTATO -->
+  <div class="contact">
+    WhatsApp: <a href="https://wa.me/5592993515959" target="_blank">(92) 99351-5959</a><br>
+    E-mail: <a href="mailto:contato@hbusiness-group.com.br">contato@hbusiness-group.com.br</a>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="footer">
+    © 2026 HBusiness Group · Em construção
+  </div>
+
+</body>
+</html>
