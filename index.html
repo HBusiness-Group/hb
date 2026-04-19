@@ -132,16 +132,307 @@
   .reveal-delay-4 { transition-delay: 0.4s; }
 
   @media (max-width: 900px) {
-    nav { padding: 20px 28px; }
+    :root {
+      --white: #fcfcf8;
+      --gray-100: #f0f0ea;
+      --gray-400: #d2d2cb;
+      --gray-600: #a8a8a0;
+      --border: rgba(252,252,248,0.18);
+      --border-light: rgba(252,252,248,0.10);
+    }
+
+    body {
+      cursor: auto;
+      -webkit-text-size-adjust: 100%;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      opacity: 0.22;
+    }
+
+    .cursor,
+    .cursor-ring {
+      display: none;
+    }
+
+    nav {
+      padding: 18px 20px;
+      background: rgba(6,6,6,0.96);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-logo {
+      gap: 10px;
+    }
+
+    .nav-logo img {
+      height: 32px;
+    }
+
+    .nav-logo-text {
+      font-size: 0.98rem;
+      letter-spacing: 0.12em;
+    }
+
     .nav-links { display: none; }
-    #hero { padding: 0 28px 60px; }
-    .hero-year { right: 28px; top: 120px; }
-    #sobre { grid-template-columns: 1fr; gap: 0; padding: 80px 28px; }
-    .sobre-right { padding-top: 40px; }
-    #portfolio { padding: 80px 28px; }
+
+    #hero {
+      min-height: 100svh;
+      padding: 0 20px 44px;
+      justify-content: flex-end;
+    }
+
+    .hero-year {
+      right: 20px;
+      top: 104px;
+      color: var(--gray-600);
+      opacity: 0.9;
+    }
+
+    .hero-index {
+      font-size: 0.72rem;
+      margin-bottom: 24px;
+      color: var(--gray-400);
+    }
+
+    .hero-headline {
+      font-size: clamp(3rem, 13vw, 4.8rem);
+      line-height: 0.96;
+      max-width: 100%;
+    }
+
+    .hero-sub {
+      margin-top: 36px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .hero-tagline {
+      max-width: 100%;
+      font-size: 0.82rem;
+      line-height: 1.8;
+      letter-spacing: 0.11em;
+      color: var(--gray-400);
+    }
+
+    .hero-scroll {
+      font-size: 0.7rem;
+      color: var(--gray-400);
+    }
+
+    .hero-scroll-line {
+      background: var(--gray-400);
+    }
+
+    #sobre {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 72px 20px;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      margin-bottom: 28px;
+      color: var(--gray-400);
+    }
+
+    .sobre-heading,
+    .portfolio-heading,
+    .cta-heading {
+      font-size: clamp(2.5rem, 9.5vw, 3.4rem);
+      line-height: 1.04;
+    }
+
+    .sobre-right {
+      padding-top: 28px;
+    }
+
+    .sobre-text,
+    .brand-card-desc,
+    .cta-text {
+      font-size: 0.92rem;
+      line-height: 1.85;
+      color: var(--gray-400);
+      letter-spacing: 0.01em;
+    }
+
+    .sobre-pillars {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .pillar {
+      padding-top: 16px;
+    }
+
+    .pillar-number,
+    .brand-card-number,
+    .brand-card-tag,
+    .portfolio-count,
+    .contact-item-label,
+    .footer-copy,
+    .footer-credit {
+      font-size: 0.68rem;
+      color: var(--gray-600);
+    }
+
+    .pillar-title {
+      font-size: 1.28rem;
+      margin-bottom: 10px;
+    }
+
+    .pillar-desc {
+      font-size: 0.84rem;
+      line-height: 1.75;
+      color: var(--gray-400);
+    }
+
+    #portfolio {
+      padding: 72px 20px;
+    }
+
+    .portfolio-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
     .brands-grid { grid-template-columns: 1fr; }
-    #contato { grid-template-columns: 1fr; gap: 48px; padding: 80px 28px; }
-    footer { flex-direction: column; text-align: center; padding: 40px 28px; }
+
+    .brand-card {
+      padding: 28px 22px;
+      background: rgba(252,252,248,0.05);
+    }
+
+    .brand-card[style*='grid-template-columns: 1fr 1fr'] {
+      display: block !important;
+    }
+
+    .brand-card[style*='grid-template-columns: 1fr 1fr'] > div {
+      padding: 28px 22px !important;
+      border-right: none !important;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-card[style*='grid-template-columns: 1fr 1fr'] > div:last-child {
+      border-bottom: none;
+    }
+
+    .brand-card-logo {
+      height: 44px;
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .brand-card-category {
+      font-size: 0.72rem;
+      line-height: 1.7;
+      color: var(--gray-600);
+      margin-bottom: 18px;
+    }
+
+    .brand-card-arrow {
+      position: static;
+      margin-top: 22px;
+      width: 40px;
+      height: 40px;
+      color: var(--gray-400);
+      border-color: var(--border);
+    }
+
+    #contato {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 72px 20px;
+    }
+
+    .cta-actions {
+      gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      font-size: 0.74rem;
+      letter-spacing: 0.14em;
+      min-height: 52px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 18px 22px;
+    }
+
+    .btn-secondary {
+      gap: 12px;
+      color: var(--gray-400);
+    }
+
+    .cta-contact-list {
+      margin-top: 32px;
+      padding-top: 28px;
+    }
+
+    .contact-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 14px 0;
+      font-size: 0.82rem;
+    }
+
+    .contact-item-value,
+    .social-link {
+      font-size: 0.82rem;
+      color: var(--gray-400);
+    }
+
+    .social-links {
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 32px 20px;
+      gap: 18px;
+    }
+
+    .footer-left {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-logo-text {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .hero-headline {
+      font-size: clamp(2.7rem, 14vw, 4.2rem);
+    }
+
+    .sobre-heading,
+    .portfolio-heading,
+    .cta-heading {
+      font-size: clamp(2.2rem, 10vw, 3rem);
+    }
+
+    .sobre-text,
+    .brand-card-desc,
+    .cta-text,
+    .pillar-desc,
+    .contact-item,
+    .contact-item-value,
+    .social-link {
+      font-size: 0.96rem;
+    }
   }
 </style>
 </head>
