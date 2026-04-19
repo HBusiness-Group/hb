@@ -434,6 +434,210 @@
       font-size: 0.96rem;
     }
   }
+
+  /* MOBILE-FIRST REFINEMENT */
+  @media (max-width: 900px) {
+    html {
+      font-size: 17px;
+    }
+
+    body {
+      line-height: 1.55;
+      background: #080808;
+      -webkit-tap-highlight-color: rgba(255,255,255,0.08);
+    }
+
+    nav {
+      min-height: 72px;
+      align-items: center;
+    }
+
+    #hero,
+    #sobre,
+    #portfolio,
+    #contato,
+    footer {
+      scroll-margin-top: 84px;
+    }
+
+    .nav-logo,
+    .btn-primary,
+    .btn-secondary,
+    .contact-item-value,
+    .social-link,
+    .brand-card {
+      touch-action: manipulation;
+    }
+
+    .hero-headline {
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+
+    .hero-tagline,
+    .sobre-text,
+    .brand-card-desc,
+    .cta-text,
+    .pillar-desc,
+    .contact-item,
+    .contact-item-value,
+    .social-link {
+      text-wrap: pretty;
+    }
+
+    .section-label,
+    .brand-card-category,
+    .brand-card-tag,
+    .portfolio-count,
+    .contact-item-label,
+    .footer-copy,
+    .footer-credit,
+    .btn-primary,
+    .btn-secondary,
+    .hero-scroll,
+    .hero-index {
+      letter-spacing: 0.1em;
+    }
+
+    .hero-tagline,
+    .sobre-text,
+    .brand-card-desc,
+    .cta-text {
+      max-width: 42ch;
+    }
+
+    .brand-card {
+      border-radius: 18px;
+      box-shadow: 0 0 0 1px rgba(252,252,248,0.04) inset;
+    }
+
+    .brand-card-tag {
+      position: static;
+      display: inline-flex;
+      margin-bottom: 18px;
+    }
+
+    .brand-card-number {
+      margin-bottom: 18px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      border-radius: 14px;
+    }
+
+    .btn-secondary {
+      padding-left: 16px;
+      padding-right: 16px;
+      border: 1px solid var(--border);
+      background: rgba(252,252,248,0.03);
+    }
+
+    .contact-item {
+      padding: 16px 0;
+    }
+
+    .contact-item-value {
+      color: var(--white);
+      line-height: 1.5;
+    }
+
+    .social-link {
+      min-height: 44px;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 560px) {
+    html {
+      font-size: 16px;
+    }
+
+    nav {
+      padding-left: 16px;
+      padding-right: 16px;
+      min-height: 68px;
+    }
+
+    #hero {
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 36px;
+    }
+
+    #sobre,
+    #portfolio,
+    #contato,
+    footer {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .hero-year {
+      right: 16px;
+      top: 96px;
+      font-size: 0.56rem;
+      opacity: 0.7;
+    }
+
+    .hero-headline {
+      font-size: clamp(2.45rem, 13.5vw, 3.6rem);
+      line-height: 0.98;
+    }
+
+    .hero-tagline,
+    .sobre-text,
+    .brand-card-desc,
+    .cta-text,
+    .pillar-desc,
+    .contact-item,
+    .contact-item-value,
+    .social-link {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .section-label,
+    .brand-card-category,
+    .portfolio-count,
+    .contact-item-label,
+    .footer-copy,
+    .footer-credit,
+    .btn-primary,
+    .btn-secondary,
+    .hero-scroll,
+    .hero-index,
+    .brand-card-tag,
+    .brand-card-number,
+    .pillar-number {
+      font-size: 0.7rem;
+    }
+
+    .pillar-title {
+      font-size: 1.2rem;
+    }
+
+    .brand-card {
+      padding: 24px 18px;
+      border-radius: 16px;
+    }
+
+    .brand-card-logo {
+      height: 40px;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      font-size: 0.76rem;
+      min-height: 50px;
+    }
+
+    .footer-logo-text {
+      letter-spacing: 0.1em;
+    }
+  }
+
 </style>
 </head>
 <body>
